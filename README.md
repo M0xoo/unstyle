@@ -18,24 +18,13 @@ With the same prompt "Create a landing page":
 - `cyberpunk`: High-tech (neon, dark mode, glitchy)
 - `minimal`: Bare minimum (whitespace, grayscale, typography focused)
 
-## Setup
+## Quickstart
 
-1. Install dependencies:
-   ```bash
-   cd c:\Users\Mokhles\ratemy\mcp-theme-generator
-   npm install
-   ```
-2. Build the project:
-   ```bash
-   npx tsc
-   ```
-
-## Usage
+You can use the server immediately without installing it globally or cloning the repository by using `npx`:
 
 ### Testing locally with the MCP Inspector
-You can test the server and its tools directly using the official MCP Inspector.
 ```bash
-npx @modelcontextprotocol/inspector node build/index.js
+npx @modelcontextprotocol/inspector npx -y @m0xoo/unstyle
 ```
 
 ### Using with Cursor
@@ -47,8 +36,8 @@ To use this server in Cursor, you need to add it to your Agent config.
 4. Configure as follows:
    - **Name**: `unstyle` (or whatever you prefer)
    - **Type**: `command`
-   - **Command**: `node`
-   - **Args**: `["c:/Users/Mokhles/ratemy/mcp-theme-generator/build/index.js"]` (Make sure to use the absolute path to your cloned/built directory)
+   - **Command**: `npx`
+   - **Args**: `["-y", "@m0xoo/unstyle"]`
 5. Save and ensure the status shows green/connected!
 
 Now, when prompting Cursor's Composer or Agent, you can say:
@@ -61,8 +50,8 @@ Add the following to your `mcp.json` or equivalent configuration file:
 {
   "mcpServers": {
     "unstyle": {
-      "command": "node",
-      "args": ["c:/Users/Mokhles/ratemy/mcp-theme-generator/build/index.js"]
+      "command": "npx",
+      "args": ["-y", "@m0xoo/unstyle"]
     }
   }
 }
