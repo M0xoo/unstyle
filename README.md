@@ -19,8 +19,22 @@ With the same prompt "Create a landing page":
 - `minimal`: Bare minimum (whitespace, grayscale, typography focused)
 
 ## Quickstart
-
 You can use the server immediately without installing it globally or cloning the repository by using `npx`:
+
+### Using with AI IDEs (Cursor, Antigravity, etc.)
+Add the following to your `mcp_config.json` or equivalent configuration file:
+
+```json
+{
+  "mcpServers": {
+    "unstyle": {
+      "command": "npx",
+      "args": ["-y", "@m0xoo/unstyle"]
+    }
+  }
+}
+```
+
 
 ### Testing locally with the MCP Inspector
 ```bash
@@ -43,16 +57,3 @@ To use this server in Cursor, you need to add it to your Agent config.
 Now, when prompting Cursor's Composer or Agent, you can say:
 > "Build a login page and use the get_theme_guidelines tool with the 'brutal' theme to style it."
 
-### Using with Claude Desktop or Antigravity
-Add the following to your `mcp.json` or equivalent configuration file:
-
-```json
-{
-  "mcpServers": {
-    "unstyle": {
-      "command": "npx",
-      "args": ["-y", "@m0xoo/unstyle"]
-    }
-  }
-}
-```
