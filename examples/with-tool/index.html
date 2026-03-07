@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutal Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brutal-pink': '#FF3366',
+                        'brutal-cyan': '#00C4FF',
+                        'brutal-yellow': '#FFE800',
+                        'brutal-bg': '#EBEBEB',
+                    },
+                    fontFamily: {
+                        'mono': ['"Space Mono"', 'monospace'],
+                        'display': ['"Syncopate"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'brutal-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+                        'brutal-xl': '12px 12px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #EBEBEB;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        /* Brutalism specific shapes and selection */
+        ::selection {
+            background-color: #FF3366;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen border-8 border-black m-4 md:m-8 bg-brutal-bg flex flex-col relative overflow-x-hidden">
+
+    <!-- Top Navigation -->
+    <nav class="border-b-8 border-black bg-white flex justify-between items-center p-4 md:p-6 sticky top-0 z-50">
+        <div class="text-2xl font-display font-bold uppercase tracking-tighter">
+            Brut<span class="text-brutal-pink">.</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-bold border-4 border-black p-2 bg-brutal-cyan shadow-brutal">
+            <a href="#features" class="hover:bg-black hover:text-white px-2 transition-colors">Features</a>
+            <a href="#pricing" class="hover:bg-black hover:text-white px-2 transition-colors">Pricing</a>
+            <a href="#about" class="hover:bg-black hover:text-white px-2 transition-colors">About</a>
+        </div>
+        <button
+            class="border-4 border-black bg-brutal-pink text-white font-bold uppercase py-2 px-6 shadow-brutal active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+            Login
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="flex-grow flex flex-col lg:flex-row border-b-8 border-black">
+        <div
+            class="flex-1 p-8 md:p-16 lg:p-24 flex flex-col justify-center border-b-8 lg:border-b-0 lg:border-r-8 border-black bg-white">
+            <div
+                class="inline-block border-4 border-black bg-brutal-yellow self-start px-4 py-2 font-bold mb-8 shadow-brutal transform -rotate-2">
+                NO FLUFF. JUST FUNCTION.
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tighter uppercase">
+                Raw Power. <br>
+                <span class="bg-black text-white px-4 pb-2 relative top-2">Unleashed.</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl font-bold leading-relaxed">
+                Break the rules of modern web design. Build something that screams. Stop using boring rounded corners
+                and soft drop shadows.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+                <button
+                    class="border-4 border-black bg-brutal-yellow text-black text-xl font-bold uppercase py-4 px-8 shadow-brutal-lg active:translate-x-2 active:translate-y-2 active:shadow-none transition-all text-center">
+                    Get Started NOW
+                </button>
+                <button
+                    class="border-4 border-black bg-white text-black text-xl font-bold uppercase py-4 px-8 shadow-brutal-lg hover:bg-brutal-cyan active:translate-x-2 active:translate-y-2 active:shadow-none transition-all text-center">
+                    Read the Docs
+                </button>
+            </div>
+        </div>
+        <div class="flex-1 bg-brutal-cyan relative overflow-hidden flex items-center justify-center p-8 min-h-[400px]">
+            <!-- Brutalist Abstract Art -->
+            <div
+                class="w-full max-w-md aspect-square bg-brutal-pink border-8 border-black shadow-brutal-xl transform rotate-6 flex items-center justify-center relative z-10 hover:rotate-12 transition-transform duration-300">
+                <div
+                    class="w-2/3 h-2/3 bg-brutal-yellow border-8 border-black rounded-full shadow-brutal transform -rotate-12 flex items-center justify-center">
+                    <div class="w-1/2 h-1/2 bg-white border-8 border-black transform rotate-45"></div>
+                </div>
+            </div>
+            <!-- Decorative grid -->
+            <div class="absolute inset-0 opacity-20 pointer-events-none"
+                style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 30px 30px;"></div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="p-8 md:p-16 border-b-8 border-black bg-brutal-yellow">
+        <h2 class="text-4xl md:text-6xl font-black mb-16 text-center uppercase tracking-tighter uppercase break-words">
+            <span class="border-b-8 border-black pb-2">Why Brutal?</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
+            <!-- Feature 1 -->
+            <div class="border-4 border-black bg-white p-8 shadow-brutal-lg hover:-translate-y-2 transition-transform">
+                <div
+                    class="w-16 h-16 bg-brutal-pink border-4 border-black mb-6 shadow-brutal flex items-center justify-center text-white text-2xl font-black">
+                    01
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Unapologetic</h3>
+                <p class="font-bold">Stand out from the sea of identical, clean, and boring modern websites. Make a
+                    statement.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+                class="border-4 border-black bg-brutal-cyan p-8 shadow-brutal-lg hover:-translate-y-2 transition-transform md:translate-y-8">
+                <div
+                    class="w-16 h-16 bg-white border-4 border-black mb-6 shadow-brutal flex items-center justify-center text-black text-2xl font-black">
+                    02
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">High Contrast</h3>
+                <p class="font-bold">Maximum visibility. No subtle grays. Black and white pushed to the absolute limits.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="border-4 border-black bg-white p-8 shadow-brutal-lg hover:-translate-y-2 transition-transform">
+                <div
+                    class="w-16 h-16 bg-brutal-yellow border-4 border-black mb-6 shadow-brutal flex items-center justify-center text-black text-2xl font-black">
+                    03
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Structural</h3>
+                <p class="font-bold">Expose the grid. Let the boxes be boxes. Thick borders define the space explicitly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+        class="p-8 md:p-24 bg-white text-center flex flex-col items-center justify-center border-b-8 border-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-brutal-pink opacity-10"
+            style="background-image: repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 10px);">
+        </div>
+        <div
+            class="relative z-10 max-w-3xl border-8 border-black bg-brutal-bg p-8 md:p-16 shadow-brutal-xl transform rotate-[-1deg]">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter">Ready to Break Things?</h2>
+            <p class="text-xl mb-10 font-bold">Join the brutalist revolution. Stop making things "pretty" and start
+                making them memorable.</p>
+            <form class="flex flex-col sm:flex-row gap-4 w-full">
+                <input type="email" placeholder="ENTER EMAIL ADDRESS"
+                    class="flex-grow border-4 border-black bg-white p-4 font-bold focus:outline-none focus:bg-brutal-cyan transition-colors text-lg placeholder-black/50">
+                <button type="submit"
+                    class="border-4 border-black bg-black text-white text-xl font-bold uppercase py-4 px-8 shadow-brutal hover:bg-brutal-pink hover:text-black transition-all">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-3xl font-display font-black tracking-tighter uppercase">
+            Brut<span class="text-brutal-yellow">.</span>
+        </div>
+        <div class="flex gap-6">
+            <a href="#"
+                class="hover:text-brutal-pink hover:-translate-y-1 transition-transform border-b-2 border-transparent hover:border-brutal-pink pb-1">Twitter</a>
+            <a href="#"
+                class="hover:text-brutal-cyan hover:-translate-y-1 transition-transform border-b-2 border-transparent hover:border-brutal-cyan pb-1">GitHub</a>
+            <a href="#"
+                class="hover:text-brutal-yellow hover:-translate-y-1 transition-transform border-b-2 border-transparent hover:border-brutal-yellow pb-1">Dribbble</a>
+        </div>
+        <div class="font-bold">
+            © 2026 BRUTALIST INC.
+        </div>
+    </footer>
+
+</body>
+
+</html>
