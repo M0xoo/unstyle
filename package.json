@@ -1,6 +1,6 @@
 {
   "name": "@m0xoo/unstyle",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "type": "module",
   "main": "build/index.js",
   "bin": "build/index.js",

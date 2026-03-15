@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnStyle Examples</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0d;
+      color: #f5f5f5;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #c4c4c9;
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    a {
+      display: block;
+      padding: 14px 16px;
+      border: 1px solid #2a2a31;
+      border-radius: 12px;
+      color: #f5f5f5;
+      text-decoration: none;
+      background: #15151a;
+    }
+
+    a:hover {
+      border-color: #4a4a56;
+      background: #1c1c22;
+    }
+
+    code {
+      color: #a3a3b2;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>UnStyle Examples</h1>
+    <p>Static demos published with GitHub Pages from the <code>examples/</code> folder.</p>
+
+    <section class="grid">
+      <a href="./without-tool/index.html">Without tool: generic baseline</a>
+      <a href="./with-tool/brutal-landing-page.html">With tool: brutal</a>
+      <a href="./with-tool/pro-chat.html">With tool: pro chat</a>
+      <a href="./with-tool/minimal-chat.html">With tool: minimal chat</a>
+      <a href="./with-tool/editorial.html">With tool: editorial</a>
+      <a href="./with-tool/nature.html">With tool: nature</a>
+      <a href="./with-tool/glass-apple-dashboard.html">With tool: glass (apple-style dashboard)</a>
+    </section>
+  </main>
+</body>
+</html>

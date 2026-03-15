@@ -67,3 +67,16 @@ To use this server in Cursor, you need to add it to your Agent config.
 Now, when prompting Cursor's Composer or Agent, you can say:
 > "Build a login page and use the get_theme_guidelines tool with the 'brutal' theme to style it."
 
+## GitHub Pages for Examples
+To publish the `examples/` folder as a browsable site:
+
+1. Push this repository to GitHub.
+2. In the repository settings, open **Pages** and set **Source** to **GitHub Actions**.
+3. Push to `main` or `master` (or run the workflow manually).
+
+This repo includes a workflow at:
+- `.github/workflows/deploy-examples-pages.yml`
+
+The published site root will serve:
+- `examples/index.html` (example directory page)
+
