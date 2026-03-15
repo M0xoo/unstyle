@@ -3,14 +3,28 @@ import { ThemeGuidelines } from "../types.js";
 export const fun: ThemeGuidelines = {
     inspiration: "Playful, friendly, inviting, and highly engaging. Often used for consumer apps, education, or modern startups that want to stand out from corporate sterility.",
     examples: ["duolingo.com", "discord.com", "linear.app (marketing illustrations)"],
+    design_principles: [
+        "Friendly first impression with high warmth and clear affordances.",
+        "Playfulness with structure: joyful visuals still follow a consistent grid.",
+        "Use expressive motion to reinforce feedback, not distract from tasks.",
+        "Keep UI language simple and welcoming."
+    ],
     rules: [
         "Large border radii everywhere (full pills or 16px+ rounded corners).",
         "Soft, colorful, deep drop shadows.",
         "Bouncy, spring-based animations.",
-        "Vibrant, saturated primary colors."
+        "Vibrant, saturated primary colors.",
+        "At least one neutral surface color to rest the eye between bright accents.",
+        "Avoid using more than 2 saturated accents in one viewport."
     ],
     what_to_use: ["Rounded sans-serif fonts", "Bright gradients", "Chunky, soft buttons", "Emojis and 3D illustrations"],
     what_not_to_use: ["Sharp corners (0px radius)", "Monochrome palettes", "Thin, serious serif fonts", "Strict technical grid lines"],
+    accessibility: [
+        "Do not place low-contrast text on gradients; keep body text on solid surfaces.",
+        "Preserve legible type sizes (>=16px body) despite playful style.",
+        "Animations should finish fast (<300ms) and respect reduced-motion.",
+        "Status and severity should use icon + label, not color alone."
+    ],
     color_palette: {
         primary: "#FF4B4B, #20D5D2, #FFB020",
         background: "#F9FAFB, #FFF8F0",

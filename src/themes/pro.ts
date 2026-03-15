@@ -3,14 +3,28 @@ import { ThemeGuidelines } from "../types.js";
 export const pro: ThemeGuidelines = {
     inspiration: "Professional, enterprise-grade, highly polished 'dev-tool' aesthetic. It feels premium, understated, and incredibly fast.",
     examples: ["linear.app", "stripe.com", "vercel.com"],
+    design_principles: [
+        "Clarity and deference: UI should support content, not compete with it.",
+        "Tight visual rhythm via consistent spacing and alignment.",
+        "Design token mindset: colors, radius, and shadows must be reusable primitives.",
+        "Polish through subtlety: depth and motion are restrained and purposeful."
+    ],
     rules: [
         "Extremely subtle borders (often just 1px with low opacity white/black).",
         "Lots of dark mode variations with very subtle mesh gradients or noise backgrounds.",
         "Muted text colors for secondary information (text-gray-400 or text-zinc-500).",
-        "Perfect alignment and tight, consistent spatial systems (4px/8px grid)."
+        "Perfect alignment and tight, consistent spatial systems (4px/8px grid).",
+        "Limit accent colors to one primary and one semantic highlight.",
+        "Use predictable component states: default, hover, focus, disabled, error."
     ],
     what_to_use: ["Inter or Geist typography", "Subtle inset shadows", "Glassmorphic overlays for modals/menus", "Framer motion for buttery smooth transitions"],
     what_not_to_use: ["Bright, saturated backgrounds", "Thick borders", "Exaggerated corner radii", "Comic fonts"],
+    accessibility: [
+        "Default text contrast should meet 4.5:1 even in dark mode.",
+        "Placeholder text should remain readable; avoid ultra-low contrast grays.",
+        "Keep focus outlines visible with >=3:1 contrast against surroundings.",
+        "Respect reduced-motion preferences by disabling spring-heavy transitions."
+    ],
     color_palette: {
         primary: "#5E6AD2 (Linear purple) or #0070F3 (Vercel blue)",
         background: "#000000, #0A0A0A, #111111",

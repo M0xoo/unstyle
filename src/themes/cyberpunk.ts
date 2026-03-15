@@ -3,14 +3,28 @@ import { ThemeGuidelines } from "../types.js";
 export const cyberpunk: ThemeGuidelines = {
     inspiration: "High-tech, low-life aesthetic. Dark modes dominated by neon glowing accents, grids, and terminal-inspired UI.",
     examples: ["cyberpunk.net", "hackthebox.com"],
+    design_principles: [
+        "High contrast dark surfaces with selective neon emphasis.",
+        "Technical mood through geometry, grid overlays, and mono typography.",
+        "Glow should communicate priority, not cover every element.",
+        "Keep interface legible before adding glitch or atmospheric effects."
+    ],
     rules: [
         "Pure black backgrounds (or very dark navy/purple).",
         "Glowing elements (box-shadow or text-shadow).",
         "Glitch effects or CRT scanlines.",
-        "Angled cuts or clipped corners (clip-path)."
+        "Angled cuts or clipped corners (clip-path).",
+        "Reserve one dominant neon accent per screen to avoid visual noise.",
+        "Use deterministic spacing tokens so complex visuals remain navigable."
     ],
     what_to_use: ["Neon colors (cyan, magenta, yellow)", "Monospace fonts", "CSS clip-path for structural shapes", "Dark/glass layered panels"],
     what_not_to_use: ["White backgrounds", "Soft pastel colors", "Rounded buttons (pills)", "Friendly serif fonts"],
+    accessibility: [
+        "Neon text on black must still pass 4.5:1 for body copy.",
+        "Keep glow radius moderate so glyph edges remain crisp.",
+        "Reduce flicker and strobe effects; avoid seizure-triggering patterns.",
+        "Provide standard focus indicators independent of glow effects."
+    ],
     color_palette: {
         primary: "#FCEE0A, #00FF41, #FF003C",
         background: "#080808, #120458",

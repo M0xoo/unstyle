@@ -1,9 +1,11 @@
 export interface ThemeGuidelines {
     inspiration: string;
     examples: string[];
+    design_principles: string[];
     rules: string[];
     what_to_use: string[];
     what_not_to_use: string[];
+    accessibility: string[];
     color_palette: {
         primary: string;
         background: string;

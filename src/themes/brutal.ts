@@ -3,14 +3,28 @@ import { ThemeGuidelines } from "../types.js";
 export const brutal: ThemeGuidelines = {
     inspiration: "Brutalism focuses on raw, unpolished, and structural elements. It's an intentional departure from modern standard web design, emphasizing huge typography, high contrast, and a 'rough' feel.",
     examples: ["neo-brutalism.com", "gumroad.com", "figma.com (brand pages)"],
+    design_principles: [
+        "Clarity through hierarchy: giant type, obvious affordances, no ambiguity.",
+        "Intentional harshness: contrast and hard edges are stylistic, not accidental.",
+        "Consistency beats decoration: repeat the same border/shadow language everywhere.",
+        "Content-first layouts with obvious reading flow and no visual noise."
+    ],
     rules: [
         "No rounded corners on structural elements unless exaggerated (e.g., 9999px or 0px).",
         "Thick, solid, black borders on almost everything.",
         "Hard, offset shadow blocks instead of soft drop shadows.",
-        "Maximal contrast, jarring color combinations are acceptable."
+        "Maximal contrast, jarring color combinations are acceptable.",
+        "Use a strict spacing scale (4/8/16/24/32) so dense visuals stay organized.",
+        "Every interactive element needs a clear hover/focus/active state."
     ],
     what_to_use: ["Monospaced fonts", "Huge sans-serif headers", "Solid colors", "Thick borders (border-4 or border-8)"],
     what_not_to_use: ["Gradients", "Soft shadows", "Translucency/opacity", "Delicate, thin font weights"],
+    accessibility: [
+        "Keep body copy at >=16px even with oversized headings.",
+        "Maintain WCAG AA contrast (4.5:1 text, 3:1 UI components).",
+        "Do not rely on color alone; pair status with icons/labels.",
+        "Preserve visible keyboard focus rings even in harsh visual style."
+    ],
     color_palette: {
         primary: "#FF3366, #00C4FF, #FFE800",
         background: "#FFFFFF, #EBEBEB",

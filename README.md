@@ -17,6 +17,16 @@ With the same prompt "Create a landing page":
 - `fun`: Playful/Consumer (bouncy, rounded, colorful)
 - `cyberpunk`: High-tech (neon, dark mode, glitchy)
 - `minimal`: Bare minimum (whitespace, grayscale, typography focused)
+- `editorial`: Magazine-inspired storytelling (typography-first, elegant hierarchy)
+- `glass`: Glassmorphism (translucent layers, blur, premium depth)
+- `nature`: Organic and calm (earth tones, approachable, mindful)
+
+## Design Standards Behind the Themes
+Theme guidance now follows broad best practices from established design systems:
+- Clear hierarchy and consistency in spacing/typography systems
+- Explicit accessibility checks (WCAG contrast and focus visibility)
+- Structured interaction states (default/hover/focus/disabled/error)
+- Motion guidance that balances personality with usability
 
 ## Quickstart
 You can use the server immediately without installing it globally or cloning the repository by using `npx`:
