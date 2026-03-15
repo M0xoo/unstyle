@@ -2,14 +2,8 @@
 
 An MCP (Model Context Protocol) server designed to help LLMs generate beautiful, non-generic, and consistent UI designs. Instead of default Tailwind styles, this tool provides strict aesthetic guidelines, inspiration, rules, and component specifications for specific design themes.
 
-## Example: Before & After
-With the same prompt "Create a landing page":
+## Examples: https://m0xoo.github.io/unstyle/
 
-**Before using UnStyle (Generic Tailwind)**
-![Before](screenshots/before.png)
-
-**After using UnStyle (Brutal Theme)**
-![After](screenshots/after.png)
 
 ## Available Themes
 - `brutal`: Neo-Brutalism (raw, high contrast, thick borders)
