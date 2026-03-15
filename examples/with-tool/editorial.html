@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Theme Story Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        editorialBg: "#F7F5F2",
+                        editorialSurface: "#EFEAE3",
+                        editorialText: "#111111",
+                        editorialMuted: "#4B4B4B",
+                        editorialBorder: "#D9D2C8",
+                        editorialAccent: "#8C3B2A"
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Inter", "system-ui", "sans-serif"]
+                    },
+                    maxWidth: {
+                        prose: "72ch"
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-editorialBg text-editorialText font-body">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+        <header class="border-b border-editorialBorder pb-8">
+            <div class="flex items-center justify-between">
+                <p class="text-xs tracking-[0.28em] uppercase text-editorialMuted">The UnStyle Review</p>
+                <button class="border border-stone-400 text-stone-900 px-5 py-2 text-sm tracking-wide uppercase hover:bg-stone-100 transition-colors rounded-none">
+                    Subscribe
+                </button>
+            </div>
+            <h1 class="font-display text-5xl md:text-6xl leading-tight mt-8 max-w-4xl">
+                Designing Calm Interfaces With Editorial Rhythm
+            </h1>
+            <p class="mt-4 text-lg text-editorialMuted max-w-prose leading-relaxed">
+                This layout is generated from the UnStyle MCP tool response:
+                <code>get_theme_guidelines(theme: "editorial")</code>.
+                It prioritizes typographic hierarchy, neutral palette control, and quiet interaction styling.
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-10">
+            <article class="lg:col-span-8">
+                <figure class="bg-editorialSurface border border-editorialBorder p-6">
+                    <div class="h-72 bg-gradient-to-br from-stone-200 to-stone-300"></div>
+                    <figcaption class="text-sm text-editorialMuted mt-3">
+                        Narrative imagery leads the section, while typography carries hierarchy.
+                    </figcaption>
+                </figure>
+
+                <section class="mt-10 border-b border-editorialBorder pb-8">
+                    <h2 class="font-display text-4xl leading-tight">Typography Before Decoration</h2>
+                    <p class="mt-4 text-editorialMuted leading-relaxed max-w-prose">
+                        Editorial interfaces should read like intentional pages, not fragmented dashboards. Use clear heading
+                        jumps, calm spacing, and restrained color accents so the content feels authored and trustworthy.
+                    </p>
+                    <blockquote class="mt-6 border-l-2 border-editorialAccent pl-5 text-2xl leading-snug font-display text-editorialText">
+                        "When hierarchy is clear, the interface feels both premium and effortless."
+                    </blockquote>
+                </section>
+
+                <section class="mt-10">
+                    <h3 class="font-display text-3xl leading-tight">Readable Long-Form Measure</h3>
+                    <p class="mt-4 text-editorialMuted leading-relaxed max-w-prose">
+                        Keep body copy at readable sizes with generous line height. Maintain link affordance with underline or
+                        explicit styling so recognition does not rely on color alone.
+                        <a href="#" class="underline underline-offset-4 decoration-editorialAccent text-editorialText">Explore the full style guide.</a>
+                    </p>
+                </section>
+            </article>
+
+            <aside class="lg:col-span-4 lg:pt-20 space-y-8">
+                <section class="bg-transparent border-b border-stone-300 pb-6">
+                    <p class="text-xs tracking-[0.24em] uppercase text-editorialMuted">Issue Notes</p>
+                    <ul class="mt-4 space-y-2 text-sm text-editorialMuted">
+                        <li>Neutral palette with one accent</li>
+                        <li>Flat surfaces, no heavy shadows</li>
+                        <li>Asymmetric grid with clear anchors</li>
+                    </ul>
+                </section>
+
+                <section class="bg-transparent border-b border-stone-300 pb-6">
+                    <p class="text-xs tracking-[0.24em] uppercase text-editorialMuted">Newsletter</p>
+                    <form class="mt-4 space-y-4">
+                        <input type="email" placeholder="Email address"
+                            class="w-full bg-transparent border-b border-stone-400 px-0 py-2 focus:outline-none focus:border-stone-900 rounded-none" />
+                        <button class="border border-stone-400 text-stone-900 px-5 py-2 text-sm tracking-wide uppercase hover:bg-stone-100 transition-colors rounded-none">
+                            Join
+                        </button>
+                    </form>
+                </section>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>

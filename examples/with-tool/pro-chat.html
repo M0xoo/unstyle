@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Theme Chat Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        page: "#0A0A0A",
+                        panel: "#111111",
+                        panelRaised: "#171717",
+                        line: "rgba(255,255,255,0.10)",
+                        text: "#EDEDED",
+                        textMuted: "#A1A1AA",
+                        primary: "#5E6AD2"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "system-ui", "sans-serif"]
+                    },
+                    boxShadow: {
+                        insetSoft: "inset 0 1px 0 rgba(255,255,255,0.06)"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        body {
+            background:
+                radial-gradient(1100px 500px at 5% -10%, rgba(94, 106, 210, 0.10), transparent 55%),
+                radial-gradient(700px 360px at 100% 0%, rgba(255, 255, 255, 0.04), transparent 45%),
+                #0A0A0A;
+        }
+
+        .scroll-clean {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.14) transparent;
+        }
+
+        .scroll-clean::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .scroll-clean::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 999px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body class="h-screen overflow-hidden text-text antialiased font-sans">
+    <div class="h-full grid grid-cols-1 md:grid-cols-[252px_1fr]">
+        <aside class="hidden md:flex flex-col border-r border-line bg-black/30 backdrop-blur-xl">
+            <div class="px-4 py-3 border-b border-line">
+                <button class="w-full rounded-md border border-white/10 bg-white/[0.06] hover:bg-white/[0.10] px-3 py-2 text-[13px] font-medium transition-colors shadow-insetSoft">
+                    New conversation
+                </button>
+            </div>
+            <div class="p-3 scroll-clean overflow-y-auto">
+                <p class="px-2 pb-2 text-[11px] uppercase tracking-[0.16em] text-textMuted">Today</p>
+                <nav class="space-y-1">
+                    <a href="#" class="block rounded-md border border-white/10 bg-white/[0.04] px-3 py-2.5">
+                        <p class="text-[13px] font-medium">API reliability rollout</p>
+                        <p class="mt-1 text-xs text-textMuted">18 messages</p>
+                    </a>
+                    <a href="#" class="block rounded-md px-3 py-2.5 hover:bg-white/[0.04] transition-colors">
+                        <p class="text-[13px] text-textMuted hover:text-text">On-call postmortem draft</p>
+                    </a>
+                    <a href="#" class="block rounded-md px-3 py-2.5 hover:bg-white/[0.04] transition-colors">
+                        <p class="text-[13px] text-textMuted hover:text-text">SDK migration plan</p>
+                    </a>
+                </nav>
+
+                <p class="px-2 pt-6 pb-2 text-[11px] uppercase tracking-[0.16em] text-textMuted">Yesterday</p>
+                <nav class="space-y-1">
+                    <a href="#" class="block rounded-md px-3 py-2.5 hover:bg-white/[0.04] transition-colors">
+                        <p class="text-[13px] text-textMuted hover:text-text">Incident timeline format</p>
+                    </a>
+                    <a href="#" class="block rounded-md px-3 py-2.5 hover:bg-white/[0.04] transition-colors">
+                        <p class="text-[13px] text-textMuted hover:text-text">Q2 pricing memo</p>
+                    </a>
+                </nav>
+            </div>
+            <div class="mt-auto border-t border-line p-4">
+                <p class="text-[11px] text-textMuted uppercase tracking-[0.16em]">Workspace</p>
+                <p class="mt-1 text-[13px] font-medium">Acme Systems</p>
+            </div>
+        </aside>
+
+        <main class="flex min-h-0 flex-col">
+            <header class="h-14 shrink-0 border-b border-line bg-black/25 backdrop-blur-xl px-4 md:px-6 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    <p class="text-[13px] font-medium">Pro Assistant</p>
+                    <span class="hidden sm:inline text-xs text-textMuted">Model tuned for execution</span>
+                </div>
+                <button class="rounded-md border border-white/10 bg-white/[0.05] hover:bg-white/[0.10] px-3 py-1.5 text-xs text-text transition-colors">
+                    Share
+                </button>
+            </header>
+
+            <section class="min-h-0 flex-1 overflow-y-auto scroll-clean">
+                <div class="mx-auto w-full max-w-3xl px-4 md:px-8 pt-8 pb-40 space-y-8">
+                    <div class="space-y-2">
+                        <h1 class="text-[28px] leading-tight font-medium tracking-[-0.01em]">Build launch plan for team sync</h1>
+                        <p class="text-sm text-textMuted">Production-ready UI pass using UnStyle <code>pro</code> rules.</p>
+                    </div>
+
+                    <article class="max-w-[78%] rounded-lg border border-white/10 bg-panelRaised/70 px-4 py-3.5 shadow-insetSoft">
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-textMuted">You</p>
+                        <p class="mt-2 text-[14px] leading-6 text-text">Create an owner-by-owner launch timeline for our new analytics feature. Include risks and fallback actions.</p>
+                    </article>
+
+                    <article class="rounded-xl border border-line bg-panel/75 backdrop-blur-md px-5 py-4 md:px-6 md:py-5 shadow-insetSoft">
+                        <div class="flex items-center justify-between">
+                            <p class="text-[11px] uppercase tracking-[0.14em] text-textMuted">Assistant</p>
+                            <button class="text-xs text-textMuted hover:text-text transition-colors">Copy</button>
+                        </div>
+                        <div class="mt-3 space-y-3 text-[14px] leading-6 text-[#D4D4D8]">
+                            <p class="text-text font-medium">Launch timeline (T-7 to T+7)</p>
+                            <p><span class="text-text">Platform:</span> freeze schema changes at T-7, final load test at T-5, ship toggles disabled.</p>
+                            <p><span class="text-text">Frontend:</span> rollout checklist at T-4, design QA + accessibility pass at T-3.</p>
+                            <p><span class="text-text">Docs + Support:</span> help center update at T-2, support scripts and triage matrix at T-1.</p>
+                            <p><span class="text-text">Risk controls:</span> gate by workspace percentage, monitor latency/errors hourly, rollback trigger if p95 increases >20% for 30m.</p>
+                        </div>
+                    </article>
+
+                    <article class="ml-auto max-w-[78%] rounded-lg border border-white/10 bg-panelRaised/70 px-4 py-3.5 shadow-insetSoft">
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-textMuted">You</p>
+                        <p class="mt-2 text-[14px] leading-6 text-text">Good. Convert this to a checklist I can paste into Linear.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="pointer-events-none absolute bottom-0 left-0 right-0 md:left-[252px] p-4 md:p-6 bg-gradient-to-t from-page via-page/96 to-transparent">
+                <div class="pointer-events-auto mx-auto w-full max-w-3xl rounded-xl border border-line bg-[#101010]/95 backdrop-blur-xl shadow-insetSoft">
+                    <div class="px-4 pt-3">
+                        <textarea rows="3" placeholder="Ask Pro Assistant"
+                            class="w-full resize-none bg-transparent text-[14px] leading-6 text-text placeholder:text-textMuted/70 focus:outline-none"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-line px-3 py-2">
+                        <div class="flex items-center gap-2">
+                            <button class="rounded-md border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] px-2.5 py-1.5 text-xs text-textMuted hover:text-text transition-colors">Attach</button>
+                            <button class="rounded-md border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] px-2.5 py-1.5 text-xs text-textMuted hover:text-text transition-colors">Tools</button>
+                        </div>
+                        <button class="rounded-md border border-primary/30 bg-primary/20 hover:bg-primary/30 px-3 py-1.5 text-xs font-medium text-white transition-colors">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

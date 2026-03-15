@@ -10,12 +10,15 @@ export const pro: ThemeGuidelines = {
         "Polish through subtlety: depth and motion are restrained and purposeful."
     ],
     rules: [
-        "Extremely subtle borders (often just 1px with low opacity white/black).",
-        "Lots of dark mode variations with very subtle mesh gradients or noise backgrounds.",
-        "Muted text colors for secondary information (text-gray-400 or text-zinc-500).",
-        "Perfect alignment and tight, consistent spatial systems (4px/8px grid).",
-        "Limit accent colors to one primary and one semantic highlight.",
-        "Use predictable component states: default, hover, focus, disabled, error."
+        "Use 1px low-contrast borders for separation; avoid heavy card outlines.",
+        "Default to product-app composition (sidebar/topbar/content/composer) over hero-marketing layouts.",
+        "Keep spacing on a strict 4px/8px rhythm and maintain left-edge alignment across sections.",
+        "Use neutral dark surfaces with sparse, low-opacity gradients only as background support.",
+        "Limit accents to one brand primary plus semantic states; accents should not dominate large surfaces.",
+        "Prefer medium density: compact controls, concise labels, and minimal decorative copy.",
+        "Typography should stay in practical scales (12/13/14/16/20/24) with 400/500/600 weights.",
+        "Message/content blocks should favor readability and structure over visual effects.",
+        "Use deterministic states for all interactive elements: default, hover, focus, disabled, error."
     ],
     what_to_use: ["Inter or Geist typography", "Subtle inset shadows", "Glassmorphic overlays for modals/menus", "Framer motion for buttery smooth transitions"],
     what_not_to_use: ["Bright, saturated backgrounds", "Thick borders", "Exaggerated corner radii", "Comic fonts"],

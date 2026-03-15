@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Theme Wellness Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moss: "#2F6B4F",
+                        earth: "#C17A3F",
+                        sand: "#F6F4EE",
+                        sandDeep: "#EDE8DD",
+                        bark: "#1F2A1F",
+                        barkSoft: "#4D5A4D",
+                        stoneLine: "#D9D2C3"
+                    },
+                    borderRadius: {
+                        organic: "1rem"
+                    },
+                    fontFamily: {
+                        display: ["DM Sans", "Manrope", "Avenir Next", "sans-serif"],
+                        body: ["Inter", "Source Sans 3", "system-ui", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            background:
+                radial-gradient(circle at 8% 5%, rgba(193, 122, 63, 0.12), transparent 32%),
+                radial-gradient(circle at 94% 12%, rgba(47, 107, 79, 0.10), transparent 30%),
+                linear-gradient(160deg, #F6F4EE 0%, #EDE8DD 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-bark font-body antialiased">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 py-8 md:py-10">
+        <header class="bg-white/85 border border-stoneLine rounded-[24px] p-5 md:p-6 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <p class="text-sm text-barkSoft">Good morning, Mira</p>
+                    <h1 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Find your calm outdoors</h1>
+                </div>
+                <button class="bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl px-5 py-2.5 font-medium transition-colors">
+                    Start mindful walk
+                </button>
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="bg-amber-50/60 border border-stone-200 rounded-2xl p-4">
+                    <p class="text-sm text-barkSoft">Today’s weather</p>
+                    <p class="mt-2 text-2xl font-display font-semibold">22°C · Soft breeze</p>
+                    <p class="text-sm text-barkSoft mt-1">Ideal conditions for a 30 min trail</p>
+                </div>
+                <div class="bg-amber-50/60 border border-stone-200 rounded-2xl p-4">
+                    <p class="text-sm text-barkSoft">Hydration goal</p>
+                    <p class="mt-2 text-2xl font-display font-semibold">1.6L / 2.0L</p>
+                    <div class="mt-3 h-2 bg-stone-200 rounded-full overflow-hidden">
+                        <div class="h-full w-4/5 bg-moss rounded-full"></div>
+                    </div>
+                </div>
+                <div class="bg-amber-50/60 border border-stone-200 rounded-2xl p-4">
+                    <p class="text-sm text-barkSoft">Stress trend</p>
+                    <p class="mt-2 text-2xl font-display font-semibold">-18% this week</p>
+                    <p class="text-sm text-barkSoft mt-1">Subtle breathing prompts are working</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-4">
+            <section class="lg:col-span-8 bg-white/82 border border-stoneLine rounded-[24px] p-5 md:p-6">
+                <div class="flex items-center justify-between">
+                    <h2 class="font-display text-2xl font-semibold">Weekly rhythm</h2>
+                    <a href="#" class="text-sm text-moss underline underline-offset-4">View details</a>
+                </div>
+                <p class="text-barkSoft mt-2">A gentle plan balanced between movement, rest, and reflection.</p>
+
+                <div class="mt-5 space-y-3">
+                    <article class="bg-amber-50/60 border border-stone-200 rounded-2xl p-4 flex items-start justify-between gap-3">
+                        <div>
+                            <p class="font-medium">Sunrise trail</p>
+                            <p class="text-sm text-barkSoft mt-1">35 min easy walk through pine loop.</p>
+                        </div>
+                        <span class="text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">Today</span>
+                    </article>
+                    <article class="bg-amber-50/60 border border-stone-200 rounded-2xl p-4 flex items-start justify-between gap-3">
+                        <div>
+                            <p class="font-medium">Breathing session</p>
+                            <p class="text-sm text-barkSoft mt-1">10 min guided cadence before lunch.</p>
+                        </div>
+                        <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-full">Tomorrow</span>
+                    </article>
+                    <article class="bg-amber-50/60 border border-stone-200 rounded-2xl p-4 flex items-start justify-between gap-3">
+                        <div>
+                            <p class="font-medium">No-screen evening</p>
+                            <p class="text-sm text-barkSoft mt-1">Sunset reflection and journaling prompt.</p>
+                        </div>
+                        <span class="text-xs bg-stone-200 text-stone-700 px-2.5 py-1 rounded-full">Friday</span>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="lg:col-span-4 space-y-4">
+                <section class="bg-white/82 border border-stoneLine rounded-[24px] p-5">
+                    <h3 class="font-display text-xl font-semibold">Quick check-in</h3>
+                    <p class="text-sm text-barkSoft mt-2">How does your body feel right now?</p>
+                    <form class="mt-4 space-y-3">
+                        <label class="block text-sm text-barkSoft" for="mood">Mood</label>
+                        <input id="mood" type="text" placeholder="Calm, tired, energized..."
+                            class="w-full bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-800 focus:outline-none focus:ring-2 focus:ring-emerald-600/40">
+                        <label class="block text-sm text-barkSoft" for="note">One short note</label>
+                        <textarea id="note" rows="3" placeholder="I felt clear after the walk."
+                            class="w-full bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-800 focus:outline-none focus:ring-2 focus:ring-emerald-600/40"></textarea>
+                        <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl px-5 py-2.5 font-medium transition-colors">
+                            Save check-in
+                        </button>
+                    </form>
+                </section>
+
+                <section class="bg-amber-50/60 border border-stone-200 rounded-2xl p-5">
+                    <p class="text-sm text-barkSoft">Grounding prompt</p>
+                    <p class="mt-2 text-lg font-display font-medium leading-relaxed">
+                        Notice three natural sounds around you. Pause for one deep breath between each.
+                    </p>
+                    <button class="mt-4 text-sm text-earth underline underline-offset-4">Try another prompt</button>
+                </section>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
