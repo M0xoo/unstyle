@@ -1,76 +1,147 @@
 <!DOCTYPE html>
+<!--
+  unstyle examples index, built with the skill.
+  Subject: a skill that finds and fixes default design choices. Native artifact: a printer's proof marked up by a proofreader.
+  Palette: proof paper, black ink, proofreader's red pen. Type: Source Serif 4 for the text (a book face, like a galley), IBM Plex Mono for rule IDs (the marks in the margin).
+  Signature: the corrections sit in a right-hand margin column, the way a proofreader marks a galley.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UnStyle Examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>unstyle: a skill that takes the default out of AI-made design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light dark;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      --paper: oklch(0.99 0.003 240);
+      --ink: oklch(0.2 0.01 250);
+      --ink-muted: oklch(0.45 0.01 250);
+      --rule: oklch(0.87 0.005 250);
+      --pen: oklch(0.52 0.2 27);
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+      --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 80px;
     }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.125rem; line-height: 1.55; }
+    a { color: inherit; text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid var(--pen); outline-offset: 3px; }
+    code, .mark, pre { font-family: var(--mono); font-size: 0.85em; }
 
-    body {
-      margin: 0;
-      background: #0b0b0d;
-      color: #f5f5f5;
-    }
+    .page { max-width: 1080px; margin: 0 auto; padding: var(--s7) var(--s5) var(--s8); display: grid; grid-template-columns: minmax(0, 1fr) 240px; column-gap: var(--s7); }
+    .row { display: contents; }
+    .text { grid-column: 1; max-width: 64ch; }
+    .margin { grid-column: 2; border-left: 1px solid var(--rule); padding-left: var(--s4); color: var(--pen); font-family: var(--mono); font-size: 0.8125rem; line-height: 1.45; }
+    .margin p { margin: 0 0 var(--s3); }
 
-    .wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 64px;
-    }
+    header.text { padding-bottom: var(--s6); }
+    .name { font-family: var(--mono); font-size: 0.9375rem; margin: 0 0 var(--s6); }
+    h1 { font-size: clamp(2.2rem, 1.4rem + 3vw, 3.6rem); line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+    .struck { text-decoration: line-through; text-decoration-color: var(--pen); text-decoration-thickness: 3px; color: var(--ink-muted); font-weight: 400; display: block; font-size: 0.55em; letter-spacing: 0; margin-bottom: var(--s3); }
+    .lede { font-size: 1.3rem; margin: var(--s5) 0 0; text-wrap: pretty; }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: 2rem;
-    }
+    h2 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 var(--s4); padding-top: var(--s6); border-top: 1px solid var(--ink); }
+    section.text { padding-bottom: var(--s6); }
+    p { margin: 0 0 var(--s4); }
+    pre { background: oklch(0.96 0.004 240); border-left: 3px solid var(--ink); padding: var(--s4); overflow-x: auto; margin: 0 0 var(--s4); line-height: 1.5; }
 
-    p {
-      margin: 0 0 24px;
-      color: #c4c4c9;
-    }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); margin: var(--s5) 0; }
+    .pair a { display: block; text-decoration: none; border-top: 3px solid var(--ink); padding-top: var(--s3); }
+    .pair a:hover strong { text-decoration: underline; }
+    .pair img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); margin-bottom: var(--s3); aspect-ratio: 16 / 11; object-fit: cover; object-position: top; }
+    .pair strong { display: block; font-size: 1.15rem; }
+    .count { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+    .count b { color: var(--pen); font-weight: 500; }
 
-    .grid {
-      display: grid;
-      gap: 12px;
-    }
+    ol.flow { padding-left: 1.4em; margin: 0 0 var(--s4); }
+    ol.flow li { margin-bottom: var(--s2); padding-left: var(--s2); }
+    footer.text { padding-top: var(--s5); border-top: 1px solid var(--rule); font-size: 0.95rem; color: var(--ink-muted); }
 
-    a {
-      display: block;
-      padding: 14px 16px;
-      border: 1px solid #2a2a31;
-      border-radius: 12px;
-      color: #f5f5f5;
-      text-decoration: none;
-      background: #15151a;
-    }
-
-    a:hover {
-      border-color: #4a4a56;
-      background: #1c1c22;
-    }
-
-    code {
-      color: #a3a3b2;
+    @media (max-width: 820px) {
+      .page { grid-template-columns: 1fr; }
+      .margin { grid-column: 1; border-left: 0; border-top: 1px dashed var(--pen); padding: var(--s3) 0 0; margin-bottom: var(--s6); }
+      .pair { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>UnStyle Examples</h1>
-    <p>Static demos published with GitHub Pages from the <code>examples/</code> folder.</p>
+  <main class="page">
+    <div class="row">
+      <header class="text">
+        <p class="name">unstyle</p>
+        <!-- unstyle-ignore: W2 (struck through on purpose, it is the example) -->
+        <h1><span class="struck">Elevate your workflow with AI</span>Design that a model would not have picked on its own.</h1>
+        <p class="lede">An agent skill for Claude Code, Codex, Cursor and other agents. It grounds each design choice in the subject, checks it against the model’s defaults, and scans the code for the tells that make a page look generated.</p>
+      </header>
+      <aside class="margin" aria-label="Proof marks">
+        <p>W2 stock verb. Say what it does.</p>
+        <p>C1, T1, L1 on the original page. See below.</p>
+      </aside>
+    </div>
 
-    <section class="grid">
-      <a href="./without-tool/index.html">Without tool: generic baseline</a>
-      <a href="./with-tool/brutal-landing-page.html">With tool: brutal</a>
-      <a href="./with-tool/pro-chat.html">With tool: pro chat</a>
-      <a href="./with-tool/minimal-chat.html">With tool: minimal chat</a>
-      <a href="./with-tool/editorial.html">With tool: editorial</a>
-      <a href="./with-tool/nature.html">With tool: nature</a>
-      <a href="./with-tool/glass-apple-dashboard.html">With tool: glass (apple-style dashboard)</a>
-    </section>
+    <div class="row">
+      <section class="text" aria-labelledby="demo-h">
+        <h2 id="demo-h">One brief, two pages</h2>
+        <p>Both pages answer “a landing page for a restaurant rota app”. The first is what a model writes with no direction. The second went through the skill: subject first, then the printed kitchen rota as the layout, then a pass against the defaults.</p>
+        <div class="pair">
+          <a href="before.html">
+            <img src="before.png" alt="The before page: dark hero with a purple gradient, a pill badge and three icon cards" width="1280" height="880" loading="lazy">
+            <strong>Before</strong>
+            <span class="count">scan: <b>P0 11</b> · <b>P1 30</b> · P2 12</span>
+          </a>
+          <a href="after.html">
+            <img src="after.png" alt="The after page: the weekly rota as a table with the reader’s row highlighted in yellow" width="1280" height="880" loading="lazy">
+            <strong>After</strong>
+            <span class="count">scan: P0 0 · P1 0 · P2 0</span>
+          </a>
+        </div>
+      </section>
+      <aside class="margin">
+        <p>The scanner checks code only. The after page also passed the swap test: put a competitor’s name on it and it stops making sense.</p>
+      </aside>
+    </div>
+
+    <div class="row">
+      <section class="text" aria-labelledby="install-h">
+        <h2 id="install-h">Install</h2>
+        <p>Any agent that reads skills:</p>
+        <pre>npx skills add M0xoo/unstyle</pre>
+        <p>Claude Code plugin:</p>
+        <pre>/plugin marketplace add M0xoo/unstyle
+/plugin install unstyle@unstyle</pre>
+        <p>Scanner only, no agent needed:</p>
+        <pre>npx @m0xoo/unstyle src/</pre>
+      </section>
+      <aside class="margin">
+        <p>Exit code 2 on any P0 or P1, so it can gate CI.</p>
+      </aside>
+    </div>
+
+    <div class="row">
+      <section class="text" aria-labelledby="how-h">
+        <h2 id="how-h">How it works</h2>
+        <ol class="flow">
+          <li>Use the design system the project already has. Stop if the UI is already good.</li>
+          <li>Name the subject, its world, and the thing that world made before software.</li>
+          <li>Write a six-line direction: palette, type, skeleton, signature, motion, voice.</li>
+          <li>Attack it. Every line must finish “because this product…”. Generic reasons fail.</li>
+          <li>Build from tokens with real content.</li>
+          <li>Scan, render, and run the silhouette, swap and squint tests.</li>
+        </ol>
+        <p>Banning Inter and purple is not enough. Models just move to the next default: Space Grotesk, cream and terracotta, mono eyebrow labels, 01 / 02 / 03. The skill tracks those too.</p>
+      </section>
+      <aside class="margin">
+        <p>S1 to S10: the second-order defaults.</p>
+      </aside>
+    </div>
+
+    <div class="row">
+      <footer class="text">
+        <a href="https://github.com/M0xoo/unstyle">Source on GitHub</a>. ISC licensed.
+      </footer>
+    </div>
   </main>
 </body>
 </html>
