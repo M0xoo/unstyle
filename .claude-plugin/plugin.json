@@ -1,0 +1,9 @@
+{
+  "name": "unstyle",
+  "description": "Takes the default out of AI-made design: grounds choices in the subject, checks them against model defaults, and scans code for the tells.",
+  "version": "2.0.0",
+  "author": { "name": "M0xoo" },
+  "repository": "https://github.com/M0xoo/unstyle",
+  "license": "ISC",
+  "keywords": ["design", "frontend", "ai-slop", "ui"]
+}

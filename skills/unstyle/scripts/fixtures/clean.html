@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low Tide Tables, Pembrokeshire</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --sea: #0f3b4a; --foam: #f4f7f6; --kelp: #3c5a2e; --buoy: #e2531d; }
+  body { font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif; background: var(--foam); color: var(--sea); }
+  h1 { font-family: "Zilla Slab", Georgia, serif; }
+  a:focus-visible { outline: 2px solid var(--buoy); outline-offset: 2px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .tide { animation: rise 900ms cubic-bezier(0.2, 0, 0, 1) both; }
+  }
+  @keyframes rise { from { transform: scaleY(0.2); } }
+</style>
+</head>
+<body>
+  <h1>Next low water at Freshwater West: 14:52, 0.6 m</h1>
+  <p>Tables for 14 beaches, checked against the Admiralty data each morning.</p>
+  <img src="chart.png" alt="Tide curve for today, low at 14:52">
+  <a href="/beaches">Pick your beach</a>
+</body>
+</html>

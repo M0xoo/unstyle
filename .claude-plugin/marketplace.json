@@ -1,0 +1,11 @@
+{
+  "name": "unstyle",
+  "owner": { "name": "M0xoo" },
+  "plugins": [
+    {
+      "name": "unstyle",
+      "source": "./",
+      "description": "Takes the default out of AI-made design: grounds choices in the subject, checks them against model defaults, and scans code for the tells."
+    }
+  ]
+}
